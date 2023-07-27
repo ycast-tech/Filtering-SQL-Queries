@@ -1,2 +1,2 @@
-# Filtering-SQL-Queries
- In this project, I will use diverse SQL filtering opertors 
+# Filtering SQL Queries
+ In this project, I use diverse SQL filtering opertors 

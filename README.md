@@ -6,7 +6,7 @@
 
 
 
-### Scenario
+#### Scenario
  You are a security professional at a large organization. Part of your job is to investigate security issues to help keep the system secure. You recently discovered some potential security issues that involve login attempts and employee machines.<br><br>
  Your task is to examine the organization’s data in their employees and log_in_attempts tables. You’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
 
@@ -15,15 +15,27 @@
 ## Retrieve after hours failed login attempts
 
 **Scenario**<br>
-You recently discovered a potential security incident that occurred after business hours. Query the `log_in_attempts` table and review after hours login activity. Use filters in SQL to create a query that identifies all failed login attempts that occurred after 18:00. (The time of the login attempt is found in the `login_time` column. The `success` column contains a value of `0` when a login attempt failed; you can use either a value of `0` or `FALSE` in your query to identify failed login attempts.)
+You recently discovered a potential security incident that occurred after business hours. Query the `log_in_attempts` table and review after hours login activity. Use filters in SQL to create a query that identifies all failed login attempts that occurred after `18:00`. (The time of the login attempt is found in the `login_time` column. The `success` column contains a value of `0` when a login attempt failed; you can use either a value of `0` or `FALSE` in your query to identify failed login attempts.)
 
 
 >Describe your query and how it works in the Retrieve after hours failed login attempts section of the Apply filters to SQL queries template. 
+
+To query for `log_in_attempts` I need to run `SELECT * FROM log_in_attempts` to select all information in the `log_in_attempts` column followed by `where` clause, then input the what I want to filter for, in this case I have to filter for `login_time` and `success`.
+
+The code would be:
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE login_time > '18:00' AND success = 1;
+```
+<img src="images/code1.png">
+
 
 ## Retrieve login attempts on specific dates
 
 **Scenario**<br>
 A suspicious event occurred on 2022-05-09. To investigate this event, you want to review all login attempts which occurred on this day and the day before. Use filters in SQL to create a query that identifies all login attempts that occurred on 2022-05-09 or 2022-05-08. (The date of the login attempt is found in the `login_date` column.)
+
 
 ## Retrieve login attempts outside of Mexico
 **Scenario**<br>

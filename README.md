@@ -167,5 +167,6 @@ In this project I demonstrate I have practical experience using SQL to
 
 - run SQL queries to retrieve information from a database and
 - apply `AND`, `OR`, `LIKE`, `%`, and `NOT` operators to filter SQL queries.
-You’re well on your way to running complex SQL queries to get specific data from a database.
+
+I can run this commands to get specific data from a SQL database.
 ##

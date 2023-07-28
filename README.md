@@ -4,22 +4,25 @@
  In the cybersecurity course, I learned how to filter queries using diverse operator, such as queries containing the `AND`, `OR`, and `NOT` operators.<br>
  In this project, I'll continue to to explore how these operators can help me refine my queries.
 
--------------------------------------------------------
 
-#### Scenario
- You are a security professional at a large organization. Part of your job is to investigate security issues to help keep the system secure. You recently discovered some potential security issues that involve login attempts and employee machines.<br><br>
- Your task is to examine the organization’s data in their employees and log_in_attempts tables. You’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
 
-------------------------------------------------------
+~~~ 
+Scenario
+ 
+You are a security professional at a large organization. Part of your job is to investigate security issues to help keep the system secure. You recently discovered some potential security issues that involve login attempts and employee machines.
+
+Your task is to examine the organization’s data in their employees and log_in_attempts tables. You’ll need to use SQL filters to retrieve records from different datasets and investigate the potential security issues.
+
+~~~
 
 
 ## Retrieve after hours failed login attempts
 
------------------------------------------------------
+
 **Scenario**<br>
 You recently discovered a potential security incident that occurred after business hours. Query the `log_in_attempts` table and review after hours login activity. Use filters in SQL to create a query that identifies all failed login attempts that occurred after `18:00`. (The time of the login attempt is found in the `login_time` column. The `success` column contains a value of `0` when a login attempt failed; you can use either a value of `0` or `FALSE` in your query to identify failed login attempts.)
 
------------------------------------------------------
+
 To query for `log_in_attempts` I need to run `SELECT * FROM log_in_attempts` to select all information in the `log_in_attempts` column followed by `where` clause, then input the what I want to filter for, in this case I have to filter for `login_time` and `success`.
 
 The code would be:

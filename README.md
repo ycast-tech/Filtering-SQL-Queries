@@ -42,6 +42,7 @@ WHERE login_time > '18:00' AND success = 1;
 ```
 <img src="images/code1.png">
 
+failed login attempts occurred after 18:00
 
 ## Retrieve login attempts on specific dates
 
@@ -55,6 +56,19 @@ query that identifies all login attempts that occurred on 2022-05-09 or 2022-05-
 of the login attempt is found in the login_date column.)
 ~~~
 
+I need to investigate a suspicious ctivity the occurred on 2022-05-09, I need to filter for some specific data, in this case, the day of the event or the day before. I also have to specify on what tables and/or rows I want to look at.
+
+I need to retrieve failed login attempts from the specified time frame.
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE login_date = '2022-05-08' OR login_date = '2022-05-09';
+
+```
+<img src="images/code2.png">
+
+login attempts were made in these two days.
+
 ## Retrieve login attempts outside of Mexico
 ~~~
 Scenario
@@ -67,6 +81,17 @@ both MEX and MEXICO, and you need to use the LIKE keyword with % to make sure yo
 reflects this.)
 ~~~
 
+Since the team believes the activity did not originate from Mexico, I need to look for login attempts outside of Mexico.
+I need to filter by countries, I have to use the `NOT` operator since I'm filtering for one country, also, the country field could whave `MEX` or `MEXICO` so I have to use the percent wildcard (`%`) to match both entries.
+```sql
+SELECT *
+FROM log_in_attempts
+WHERE NOT country = 'MEX%';
+
+```
+<img src="images/code3.png">
+
+login attempts were made outside of Mexico.
 
 ## Retrieve employees in Marketing
 ~~~
@@ -83,6 +108,15 @@ column are East-170, East-320, and North-434. You’ll need to use the LIKE keyw
 filter for the East building.)
 ~~~
 
+Being up-to-date with the updates if very important, failure to be updated is a mejor security risk, the team wants to update certain machines in the marketing department and they want me to provide the necessary information to perform the updates.
+
+```sql
+SELECT * 
+FROM employees
+WHERE department = 'Marketing' AND office = 'EAST-170' OR office = 'EAST-320';
+```
+<img src="images/code4.png">
+
 ## Retrieve employees in Finance or Sales
 
 ~~~
@@ -93,6 +127,15 @@ and Finance departments. Use filters in SQL to create a query that identifies al
 the Sales or Finance departments. (The department of the employee is found in the department 
 column, which contains values that include Sales and Finance.)
 ~~~
+
+The team wants to update some machines in the Sales and Finance departments, I need to query for the employees working in the Sales and Financial department, so I will run the following code:
+
+```sql
+SELECT *
+FROM employees
+Where department ='Sales' AND department = 'Finance';
+```
+<img src="images/code5.png">
 
 ## Retrieve all employees not in IT
 
@@ -105,6 +148,22 @@ need it. Use filters in SQL to create a query which identifies all employees not
 department. (The department of the employee is found in the department column, which contains 
 values that include Information Technology.)
 ~~~
+
+The team needs to update the machines that haven't been updated yet, I am to provide the information on machines that need to be updated. To query for this machines, i will run the following ccommand:
+
+```sql
+SELECT *
+FROM employees
+WHERE NOT department = 'Information Technology' OR department = 'IT'
+```
+
+<img src="images/code6.png">
+
 ## Summary
 
-test
+In this project demonstrate I have practical experience in using SQL to
+
+- run SQL queries to retrieve information from a database and
+- apply `AND`, `OR`, and `NOT` operators to filter SQL queries.
+You’re well on your way to running complex SQL queries to get specific data from a database.
+##

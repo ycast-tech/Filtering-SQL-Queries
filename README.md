@@ -163,9 +163,9 @@ WHERE NOT department = 'Information Technology' OR department = 'IT'
 
 ## Summary
 
-In this project demonstrate I have practical experience in using SQL to
+In this project I demonstrate I have practical experience using SQL to
 
 - run SQL queries to retrieve information from a database and
-- apply `AND`, `OR`, and `NOT` operators to filter SQL queries.
+- apply `AND`, `OR`, `LIKE`, `%`, and `NOT` operators to filter SQL queries.
 You’re well on your way to running complex SQL queries to get specific data from a database.
 ##

@@ -65,9 +65,9 @@ FROM log_in_attempts
 WHERE login_date = '2022-05-08' OR login_date = '2022-05-09';
 
 ```
-<img src="images/code2.png">
+<img src="images/code2.png" width=600>
 
-login attempts were made in these two days.
+75 login attempts were made in these two days.
 
 ## Retrieve login attempts outside of Mexico
 ~~~
@@ -86,12 +86,12 @@ I need to filter by countries, I have to use the `NOT` operator since I'm filter
 ```sql
 SELECT *
 FROM log_in_attempts
-WHERE NOT country = 'MEX%';
+WHERE NOT country LIKE 'MEX%';
 
 ```
-<img src="images/code3.png">
+<img src="images/code3.png" Width=600>
 
-login attempts were made outside of Mexico.
+144 login attempts were made outside of Mexico.
 
 ## Retrieve employees in Marketing
 ~~~
@@ -113,9 +113,9 @@ Being up-to-date with the updates if very important, failure to be updated is a 
 ```sql
 SELECT * 
 FROM employees
-WHERE department = 'Marketing' AND office = 'EAST-170' OR office = 'EAST-320';
+WHERE department = 'Marketing' AND office = 'EAST%';
 ```
-<img src="images/code4.png">
+<img src="images/code4.png" width=600>
 
 ## Retrieve employees in Finance or Sales
 
@@ -133,9 +133,9 @@ The team wants to update some machines in the Sales and Finance departments, I n
 ```sql
 SELECT *
 FROM employees
-Where department ='Sales' AND department = 'Finance';
+WHERE department = 'Sales' OR department = 'Finance';
 ```
-<img src="images/code5.png">
+<img src="images/code5.png" width=600>
 
 ## Retrieve all employees not in IT
 
@@ -157,7 +157,9 @@ FROM employees
 WHERE NOT department = 'Information Technology' OR department = 'IT'
 ```
 
-<img src="images/code6.png">
+<img src="images/code6.png" width=600>
+
+161 employees are not in the Information Technology department.
 
 ## Summary
 

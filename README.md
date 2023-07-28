@@ -40,9 +40,9 @@ SELECT *
 FROM log_in_attempts
 WHERE login_time > '18:00' AND success = 0;
 ```
-<img src="images/code1.png">
+<img src="images/code1.png" width=600>
 
-failed login attempts occurred after 18:00
+19 failed login attempts occurred after 18:00.
 
 ## Retrieve login attempts on specific dates
 

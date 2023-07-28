@@ -38,7 +38,7 @@ The code would be:
 ```sql
 SELECT *
 FROM log_in_attempts
-WHERE login_time > '18:00' AND success = 1;
+WHERE login_time > '18:00' AND success = 0;
 ```
 <img src="images/code1.png">
 

@@ -28,7 +28,8 @@ You recently discovered a potential security incident that occurred after busine
 the log_in_attempts table and review after hours login activity. Use filters in SQL to create a 
 query that identifies all failed login attempts that occurred after 18:00. (The time of the 
 login attempt is found in the login_time column. The success column contains a value of 0
-when a login attempt failed; you can use either a value of 0 or FALSE in your query to identify failed login attempts.)
+when a login attempt failed; you can use either a value of 0 or FALSE in your query to identify 
+failed login attempts.)
 ~~~
 
 To query for `log_in_attempts` I need to run `SELECT * FROM log_in_attempts` to select all information in the `log_in_attempts` column followed by `where` clause, then input the what I want to filter for, in this case I have to filter for `login_time` and `success`.

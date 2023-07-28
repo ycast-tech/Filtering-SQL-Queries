@@ -37,7 +37,10 @@ WHERE login_time > '18:00' AND success = 1;
 ```nocode
 Scenario
 
-A suspicious event occurred on 2022-05-09. To investigate this event, you want to review all login attempts which occurred on this day and the day before. Use filters in SQL to create a query that identifies all login attempts that occurred on 2022-05-09 or 2022-05-08. (The date of the login attempt is found in the login_date column.)
+A suspicious event occurred on 2022-05-09. To investigate this event, you want to review all 
+login attempts which occurred on this day and the day before. Use filters in SQL to create a 
+query that identifies all login attempts that occurred on 2022-05-09 or 2022-05-08. (The date 
+of the login attempt is found in the login_date column.)
 ```
 
 ## Retrieve login attempts outside of Mexico
